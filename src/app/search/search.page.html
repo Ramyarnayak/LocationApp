@@ -1,0 +1,254 @@
+<ion-header>
+  <ion-toolbar>
+
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-title>Search places</ion-title>
+    <ion-buttons slot="primary">
+      
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<!-- <ion-content padding> -->
+
+<!-- <ion-item>
+<ion-label>Select Place</ion-label>
+<ion-select [(ngModel)]="isType" (click)="nearbyPlace()">
+<ion-select-option value="">Select</ion-select-option>
+    <ion-select-option value="hospital">Hospital</ion-select-option>
+    <ion-select-option value="restaurant">Restaurant</ion-select-option>
+    <ion-select-option value="bank">Bank</ion-select-option>
+    <ion-select-option value="airport">Airport</ion-select-option>
+    <ion-select-option value="library">Library</ion-select-option>
+    <ion-select-option value="gym">Gym</ion-select-option>
+  <ion-select-option value="atm">Atm</ion-select-option>
+  <ion-select-option value="shopping_mall">Shopping Mall</ion-select-option>
+  <ion-select-option value="police">Police Station</ion-select-option>
+  <ion-select-option value="zoo">Zoo</ion-select-option>
+</ion-select>
+</ion-item>
+
+<ion-item>
+<ion-label>Select Distance</ion-label>
+<ion-select [(ngModel)]="isKM" (ionChange)="nearbyPlace()">
+<ion-select-option value="500">Select</ion-select-option>
+    <ion-select-option value="2000">2 KM</ion-select-option>
+    <ion-select-option value="4000">4 KM</ion-select-option>
+    <ion-select-option value="6000">6 KM</ion-select-option>
+    <ion-select-option value="8000">8 KM</ion-select-option>
+</ion-select>
+</ion-item> -->
+
+
+<!-- <ion-segment [(ngModel)]="place_view_option" color="" (ionChange)="segmentChanged($event)" >
+  
+  <ion-segment-button value="map" class="segment">
+    <ion-icon name="map"></ion-icon>
+    Map View
+  </ion-segment-button>
+
+  Contact Tab for the student contact information -->
+  <!-- <ion-segment-button value="list">
+    <ion-icon name="list"></ion-icon>
+    List View
+  </ion-segment-button>
+
+</ion-segment> --> 
+
+
+
+
+
+<!-- <div #map id="map"  >
+
+</div>
+
+
+<div class="segment-title" id="card" *ngFor="let item of details">
+  <ion-card (click)="onClick(item)">
+    <ion-item>
+    
+      <ion-thumbnail *ngIf="item.photos" item-start>
+        <img [src]="item.photos[0].getUrl()">
+      </ion-thumbnail>
+        <ion-thumbnail *ngIf="!item.photos" item-start>
+          <img [src]="item.icon">
+      </ion-thumbnail>
+      <ion-grid>
+        <ion-row>
+          <ion-col>        
+          <div *ngIf="item.photos">
+              <img [src]="item.photos[0].getUrl()" width=100px height="100px"/>
+            </div>
+            <ion-label>{{item.name}}</ion-label>   
+          <p style="color: red;">Rating: {{item.rating||"N/A"}}</p>   
+            <p>{{item.vicinity||"N/A"}}</p>
+          </ion-col>     
+        </ion-row>
+      </ion-grid>    
+    </ion-item>
+    <ion-card-content>
+      <ion-label>{{item.business_status||"N/A"}}</ion-label>
+    </ion-card-content>
+  </ion-card>
+
+    </div>
+ 
+
+<p>Nearby {{isType||"places"}}</p>
+<p>{{photocopy}}</p>
+<p>{{state}}</p>
+
+ 
+</ion-content> -->
+<!-- <ion-content>
+<ion-segment [(ngModel)]="place_view_option"  (ionChange)="segmentChanged($event)" >
+  <ion-segment-button value="map" class="segment">
+    <ion-icon name="map"></ion-icon>
+    Map View
+  </ion-segment-button>
+
+ Contact Tab for the student contact information
+  <ion-segment-button value="list">
+    <ion-icon name="list"></ion-icon>
+    List View
+  </ion-segment-button>
+
+</ion-segment> -->
+
+
+
+ 
+  <!-- <ion-item>
+    <ion-label>Select Place</ion-label>
+    <ion-select [(ngModel)]="isType" (click)="nearbyPlace()">
+    <ion-select-option value="">Select</ion-select-option>
+        <ion-select-option value="hospital">Hospital</ion-select-option>
+        <ion-select-option value="restaurant">Restaurant</ion-select-option>
+        <ion-select-option value="bank">Bank</ion-select-option>
+        <ion-select-option value="airport">Airport</ion-select-option>
+        <ion-select-option value="library">Library</ion-select-option>
+        <ion-select-option value="gym">Gym</ion-select-option>
+      <ion-select-option value="atm">Atm</ion-select-option>
+      <ion-select-option value="shopping_mall">Shopping Mall</ion-select-option>
+      <ion-select-option value="police">Police Station</ion-select-option>
+      <ion-select-option value="zoo">Zoo</ion-select-option>
+    </ion-select>
+    </ion-item>
+    
+    <ion-item>
+    <ion-label>Select Distance</ion-label>
+    <ion-select [(ngModel)]="isKM" (ionChange)="nearbyPlace()">
+    <ion-select-option value="500">Select</ion-select-option>
+        <ion-select-option value="2000">2 KM</ion-select-option>
+        <ion-select-option value="4000">4 KM</ion-select-option>
+        <ion-select-option value="6000">6 KM</ion-select-option>
+        <ion-select-option value="8000">8 KM</ion-select-option>
+    </ion-select>
+    </ion-item> -->
+  
+    <ion-content>
+      <ion-item>
+<ion-label>Select Place</ion-label>
+<ion-select [(ngModel)]="isType" (click)="nearbyPlace()">
+<ion-select-option value="">Select</ion-select-option>
+    <ion-select-option value="hospital">Hospital</ion-select-option>
+    <ion-select-option value="restaurant">Restaurant</ion-select-option>
+    <ion-select-option value="bank">Bank</ion-select-option>
+    <ion-select-option value="airport">Airport</ion-select-option>
+    <ion-select-option value="library">Library</ion-select-option>
+    <ion-select-option value="gym">Gym</ion-select-option>
+  <ion-select-option value="atm">Atm</ion-select-option>
+  <ion-select-option value="shopping_mall">Shopping Mall</ion-select-option>
+  <ion-select-option value="police">Police Station</ion-select-option>
+  <ion-select-option value="zoo">Zoo</ion-select-option>
+</ion-select>
+</ion-item>
+
+<ion-item>
+<ion-label>Select Distance</ion-label>
+<ion-select [(ngModel)]="isKM" (ionChange)="nearbyPlace()">
+<ion-select-option value="500">Select</ion-select-option>
+    <ion-select-option value="2000">2 KM</ion-select-option>
+    <ion-select-option value="4000">4 KM</ion-select-option>
+    <ion-select-option value="6000">6 KM</ion-select-option>
+    <ion-select-option value="8000">8 KM</ion-select-option>
+</ion-select>
+</ion-item>
+
+      <ion-segment [(ngModel)]="place_view_option" color="" (ionChange)="segmentChanged($event)" >
+    
+        <ion-segment-button value="map" class="segment">
+          <ion-icon name="map"></ion-icon>
+          Map View
+        </ion-segment-button>
+    
+        <!-- Contact Tab for the student contact information -->
+        <ion-segment-button value="list">
+          <ion-icon name="list"></ion-icon>
+          List View
+        </ion-segment-button>
+    
+      </ion-segment>
+     
+ 
+     <h3 class="segment-title" padding [style.display]="show_map ? 'block' : 'none'" >Restaurants nearby</h3>
+    <!-- Display Map here  -->
+    <!-- <p>Hello Dengun</p> -->
+    <div #map id="map" [style.display]="show_map ? 'block' : 'none'" ></div>
+  
+<!-- Build a switch to check the three segment click -->
+<div>
+  
+  <!-- This means, the student has clicked on the Map Tab Segment -->
+  <div  [style.display]="place_view_option == 'map' ? 'block' : 'none'"  class="segment-item">
+   
+  </div>
+
+  <!-- This means, the student has clicked on List View Tab Segment -->
+  <div [style.display]="place_view_option == 'list' ? 'block' : 'none'"  class="segment-item">
+    <div class="segment-item">
+
+      <h3 class="segment-title"  padding>
+       Near By Locations
+      </h3>
+
+      <!-- Display a list of nearby services to the user -->
+    
+      <ion-card *ngFor="let item of details">
+        <ion-item>
+        
+          <ion-thumbnail *ngIf="item.photos" item-start>
+            <img [src]="item.photos[0].getUrl()">
+          </ion-thumbnail>
+            <ion-thumbnail *ngIf="!item.photos" item-start>
+              <img [src]="item.icon">
+          </ion-thumbnail>
+          <ion-grid>
+            <ion-row>
+              <ion-col>        
+              <div *ngIf="item.photos">
+                  <!-- <img [src]="item.photos[0].getUrl()" width=100px height="100px"/> -->
+                </div>
+                <ion-label>{{item.name}}</ion-label>   
+              <p style="color: red;">Rating: {{item.rating||"N/A"}}</p>   
+                <p>{{item.vicinity||"N/A"}}</p>
+              </ion-col>     
+            </ion-row>
+          </ion-grid>    
+        </ion-item>
+        <ion-card-content>
+          <ion-label>{{item.business_status||"N/A"}}</ion-label>
+          <ion-label slot="end" class="arrow-icon" (click)="onClick(item)">Pick</ion-label>
+        </ion-card-content>
+     
+      </ion-card>
+
+    </div>
+  </div>
+</div>
+
+ 
+</ion-content>

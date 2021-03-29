@@ -1,0 +1,49 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title></ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content fullscreen >
+  <ion-slides pager="false" [options]="slideOpts">
+    <ion-slide class="slide-background swiper-no-swiping" *ngFor="let background of backgrounds"
+      [ngStyle]="{'background-image': 'url(' + background +')'}">
+    </ion-slide>
+  </ion-slides>
+
+
+  <div class="login-container">
+    <img class="logo" src="assets/yannbf/img/logo/logo-canon.png" />
+    <form #f="ngForm" (ngSubmit)="onSubmit(f)">
+      <strong>{{ isLogin ? 'Login' : 'Signup' }}</strong>
+      <ion-item>
+        <ion-input 
+        type="email"
+        ngModel
+        name="email"
+        required
+        email
+        #emailCtrl="ngModel"
+        placeholder="Email"></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-input 
+        type="password"
+                ngModel
+                name="password"
+                required
+                minlength="6"
+                #passwordCtrl="ngModel" 
+                placeholder="Password"></ion-input>
+      </ion-item>
+      <ion-button class="ion-margin" 
+   fill="clear"
+        expand="block"
+         type="submit"
+         [disabled]="!f.valid"
+      color="danger">  {{ isLogin ? 'Login' : 'Signup' }}</ion-button>
+      <p (click)="onSwitchAuthMode()"><strong>  Switch to {{ isLogin ? 'Signup' : 'Login' }}</strong></p>
+    </form>
+  </div>
+
+</ion-content>

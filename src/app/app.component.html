@@ -1,0 +1,82 @@
+<!-- <ion-app>
+  <ion-menu side="start">
+    <ion-header>
+      <ion-toolbar>
+        <ion-title>
+          PairBnB
+        </ion-title>
+      </ion-toolbar>
+    </ion-header>
+
+    <ion-content>
+      <ion-list>
+        <ion-menu-toggle>
+          <ion-item lines="none" routerLink="/places/tabs/discover">
+            <ion-icon name="business" slot="start"></ion-icon>
+            <ion-label>Home</ion-label>
+          </ion-item>
+        </ion-menu-toggle>
+        <ion-menu-toggle>
+          <ion-item lines="none" routerLink="/bookings">
+            <ion-icon name="checkbox-outline" slot="start"></ion-icon>
+            <ion-label>Your Bookings</ion-label>
+          </ion-item>
+        </ion-menu-toggle>
+        <ion-menu-toggle>
+          <ion-item lines="none" routerLink="/places/tabs/offers" button>
+            <ion-icon name="card" slot="start"></ion-icon>
+            <ion-label>Offer</ion-label>
+          </ion-item>
+        </ion-menu-toggle>
+        <ion-menu-toggle>
+          <ion-item lines="none" (click)="onLogout()" button>
+            <ion-icon name="exit" slot="start"></ion-icon>
+            <ion-label>Logout</ion-label>
+          </ion-item>
+        </ion-menu-toggle>
+      </ion-list>
+    </ion-content>
+  </ion-menu>
+  <ion-router-outlet main></ion-router-outlet>
+</ion-app> -->
+<ion-app>
+  <ion-split-pane contentId="main-content">
+    <ion-menu contentId="main-content" type="overlay" >
+      <ion-content>
+        <div class="main-list">
+          <ion-list id="inbox-list">
+
+            <ion-menu-toggle auto-hide="false">
+              <ion-item lines="none" routerLink="/places/tabs/discover" detail="false" class="ion-text-center" [class.selected]="selectedIndex == 1">
+                <ion-label>Home</ion-label>
+              </ion-item>
+            </ion-menu-toggle>
+            <ion-menu-toggle auto-hide="false">
+              <ion-item lines="none" routerLink="/places/tabs/offers"  detail="false" class="ion-text-center" [class.selected]="selectedIndex == 2">
+                <ion-label>Add Place</ion-label>
+              </ion-item>
+            </ion-menu-toggle>
+            <ion-menu-toggle auto-hide="false">
+              <ion-item lines="none" routerLink="/bookings" detail="false" class="ion-text-center" [class.selected]="selectedIndex == 3">
+                <ion-label>Bookings</ion-label>
+              </ion-item>
+            </ion-menu-toggle>
+            <ion-menu-toggle auto-hide="false">
+              <ion-item lines="none" (click)="onLogout()" detail="false" class="ion-text-center" [class.selected]="selectedIndex == 4">
+                <ion-label>Logout</ion-label>
+              </ion-item>
+            </ion-menu-toggle>
+    
+          </ion-list>
+
+          <!-- Close Button -->
+          <ion-button fill="clear" color="dark" (click)="close()">
+            <ion-icon name="close-circle-outline"></ion-icon>
+          </ion-button>
+        </div>
+      </ion-content>
+    </ion-menu>
+    <ion-router-outlet id="main-content"></ion-router-outlet>
+  </ion-split-pane>
+</ion-app>
+
