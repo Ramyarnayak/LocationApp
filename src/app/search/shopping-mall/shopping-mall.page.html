@@ -10,53 +10,55 @@
 </ion-header>
 
 
-
 <ion-content class="page-background">
   
   <div class="welcome-header">
     <div class="content">
-      <div class="title">Explore the world of books.</div>
-      <div class="subtitle">Satisfy the thirst of knowledge...</div>
+      <div class="title">A mall that has it all!</div>
+      <div class="subtitle">center for Shopping lover...</div>
     </div>
 
-    <ion-fab-button class="refresh" color="dark">
-      <ion-icon name="md-refresh"></ion-icon>
-    </ion-fab-button>
+    <ion-button style="margin-left: 150px" color="primary" routerLink="/places/tabs/search"
+    >Pick More >></ion-button>
 
-  </div>
-  <div class="body ion-padding">
-    <div class="ion-text-center" *ngIf="!isLoading && results.length <= 0">
-      <p>No locations picked by you yet!!</p>
-      <ion-button color="primary" routerLink="/places/tabs/search"
-        >Pick Locations</ion-button
-      >
-    </div>
-      
-    <div class="currencies" *ngIf="!isLoading && results.length > 0">
-      <ion-row class="currency" *ngFor="let offer of results">
+  <ion-fab-button class="fab" color="purple" (click)="openHintModal()">
+<p class="fab-p">Tap</p>
+  </ion-fab-button>
  
-       
-        <ion-col class="image" *ngIf="offer.placeType === 'shopping_mall'">
-          <img [src]="offer.imageIcon" alt="">
-        </ion-col>
-        <ion-col size="3" class="text" *ngIf="offer.placeType === 'shopping_mall'">
-         
-       
-          <p class="rank"> {{offer.rating || "No ratings"}}</p>
- 
-        </ion-col>
-        <ion-col size="5" class="text" *ngIf="offer.placeType === 'shopping_mall'">
-          <p class="usd">{{offer.name }} </p>
-          <p class="evolution" ></p>
-        </ion-col>
-        <ion-col size="1" *ngIf="offer.placeType === 'shopping_mall'">
 
-            <ion-icon name="trash" (click)="onCancel(offer.id)"></ion-icon>
-
-        </ion-col>
-
-      </ion-row>
-    </div>
-
+</div>
+<div class="body ion-padding">
+  <div class="ion-text-center" *ngIf="!isLoading && results.length <= 0">
+    <p>No locations picked by you yet!!</p>
+    <ion-button color="primary" routerLink="/places/tabs/search"
+      >Pick Locations</ion-button
+    >
   </div>
+    
+  <div class="currencies" *ngIf="!isLoading && results.length > 0">
+    <ion-row class="currency" *ngFor="let offer of results">
+
+     
+      <ion-col class="image" *ngIf="offer.placeType === 'shopping_mall'">
+        <img [src]="offer.imageIcon" alt="">
+      </ion-col>
+      <ion-col size="3" class="text" *ngIf="offer.placeType === 'shopping_mall'">
+        <p class="rank"> Rating: {{offer.rating || "No ratings"}}</p>
+     <p class="rank-business">{{offer.business_status || "N/A"}} </p>
+      </ion-col>
+      <ion-col size="5" class="text" *ngIf="offer.placeType === 'shopping_mall'">
+        <p class="usd">{{offer.name }} </p>
+     <br>
+        <p class="evolution" >{{offer.vicinity}}</p>
+      </ion-col>
+      <ion-col size="1" *ngIf="offer.placeType === 'shopping_mall'">
+
+          <ion-icon name="trash" (click)="onCancel(offer.id)"></ion-icon>
+
+      </ion-col>
+
+    </ion-row>
+  </div>
+
+</div>
 </ion-content>

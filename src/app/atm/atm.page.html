@@ -19,9 +19,14 @@
       <div class="subtitle">Folks can't carry around money in their pocket ...</div>
     </div>
 
-    <ion-fab-button class="refresh" color="dark">
-      <ion-icon name="md-refresh"></ion-icon>
+  
+    <ion-button style="margin-left: 150px" color="primary" routerLink="/places/tabs/search"
+      >Pick More >></ion-button>
+
+    <ion-fab-button class="fab" color="purple" (click)="openHintModal()">
+    <p class="fab-p">Tap</p>
     </ion-fab-button>
+   
 
   </div>
   <div class="body ion-padding">
@@ -40,14 +45,15 @@
           <img [src]="offer.imageIcon" alt="">
         </ion-col>
         <ion-col size="3" class="text" *ngIf="offer.placeType === 'atm'">
+          <p class="rank"> Rating: {{offer.rating || "No ratings"}}</p>
+       <p class="rank-business">{{offer.business_status || "N/A"}} </p>
          
-       
-          <p class="rank"> {{offer.rating || "No ratings"}}</p>
  
         </ion-col>
         <ion-col size="5" class="text" *ngIf="offer.placeType === 'atm'">
           <p class="usd">{{offer.name }} </p>
-          <p class="evolution" ></p>
+       <br>
+          <p class="evolution" >{{offer.vicinity}}</p>
         </ion-col>
         <ion-col size="1" *ngIf="offer.placeType === 'atm'">
 
