@@ -4,6 +4,7 @@ import { Component, OnInit } from '@angular/core';
   selector: 'app-for-weekend',
   templateUrl: './for-weekend.page.html',
   styleUrls: ['./for-weekend.page.scss'],
+
 })
 export class ForWeekendPage implements OnInit {
 

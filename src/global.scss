@@ -1,15 +1,41 @@
 // http://ionicframework.com/docs/theming/
-@import '~@ionic/angular/css/core.css';
-@import '~@ionic/angular/css/normalize.css';
-@import '~@ionic/angular/css/structure.css';
-@import '~@ionic/angular/css/typography.css';
+// @import '~@ionic/angular/css/core.css';
+// @import '~@ionic/angular/css/normalize.css';
+// @import '~@ionic/angular/css/structure.css';
+// @import '~@ionic/angular/css/typography.css';
 
-@import '~@ionic/angular/css/padding.css';
-@import '~@ionic/angular/css/float-elements.css';
-@import '~@ionic/angular/css/text-alignment.css';
-@import '~@ionic/angular/css/text-transformation.css';
-@import '~@ionic/angular/css/flex-utils.css';
+// @import '~@ionic/angular/css/padding.css';
+// @import '~@ionic/angular/css/float-elements.css';
+// @import '~@ionic/angular/css/text-alignment.css';
+// @import '~@ionic/angular/css/text-transformation.css';
+// @import '~@ionic/angular/css/flex-utils.css';
+/* Core CSS required for Ionic components to work properly */
+@import "~@ionic/angular/css/core.css";
 
+/* Basic CSS for apps built with Ionic */
+@import "~@ionic/angular/css/normalize.css";
+@import "~@ionic/angular/css/structure.css";
+@import "~@ionic/angular/css/typography.css";
+@import "~@ionic/angular/css/display.css";
+
+/* Optional CSS utils that can be commented out */
+@import "~@ionic/angular/css/padding.css";
+@import "~@ionic/angular/css/float-elements.css";
+@import "~@ionic/angular/css/text-alignment.css";
+@import "~@ionic/angular/css/text-transformation.css";
+@import "~@ionic/angular/css/flex-utils.css";
+
+/* Angular Material */
+@import "~@angular/material/prebuilt-themes/deeppurple-amber.css";
 .ion-invalid.ion-touched ion-label {
     color: var(--ion-color-danger);
 }
+.inset-modal {
+    background-color: rgba(0, 0, 0, 0.5) !important;
+    transition: opacity 0.25s ease-in-out;
+    padding: 20vh 10vw;
+  }
+  
+  .radius-modal{
+    --border-radius: 8% 8% 4% 4%  !important;
+  }

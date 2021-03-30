@@ -456,11 +456,6 @@ export class DiscoverPage implements OnInit, OnDestroy {
     }
   };
 
-
-
-
-
-
   loadedPlaces: Place[];
   listedLoadedPlaces: Place[];
   relevantPlaces: Place[];
@@ -472,6 +467,8 @@ export class DiscoverPage implements OnInit, OnDestroy {
   isloading = false;
   public categories = [];
   isLoadImage: boolean;
+  isdone: boolean;
+  isLoadingImage: boolean;
   
   constructor(
     private placesService: PlacesService,
@@ -501,18 +498,19 @@ export class DiscoverPage implements OnInit, OnDestroy {
     this.router.navigateByUrl("/places/tabs/search/for-weeekend")
   }
   if(title==="Dream\'s Adventure"){
-    this.router.navigateByUrl("/places/tabs/search")
+    this.router.navigateByUrl("/places/tabs/search/adventure")
   }
   if(title==="Family Time"){
-    this.router.navigateByUrl("/places/tabs/search")
+    this.router.navigateByUrl("/places/tabs/search/for-family")
   }
   if(title==="My Trip"){
-    this.router.navigateByUrl("/places/tabs/search")
+    this.router.navigateByUrl("/places/tabs/search/my-trip")
   }
 }
 
 
   ionViewWillEnter(){
+    this.isLoadingImage=true;
     this.isLoading=true;
     this.placesService.fetchPlaces().subscribe(() => {
       this.isLoading=false;
@@ -534,9 +532,12 @@ export class DiscoverPage implements OnInit, OnDestroy {
       if(event.detail.value === 'all'){
         // this.relevantPlaces = this.loadedPlaces;
         // this.listedLoadedPlaces = this.relevantPlaces.slice(1);
-        this.isLoadImage = true;
+        this.isdone=false;
+        this.isLoadingImage=true;
+
       } else{
-        this.isLoadImage = false;
+        this.isdone=true
+      
         // this.relevantPlaces = this.loadedPlaces.filter(place =>
         //   place.userId !== userId)
         //   this.listedLoadedPlaces = this.relevantPlaces.slice(1);

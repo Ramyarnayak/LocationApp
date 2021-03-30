@@ -292,6 +292,7 @@ export class PlacesService {
   addSearchPlace(
     placeType: string,
     imageURL: string,
+    
     imageIcon: string,
      name: string,
     rating: number,

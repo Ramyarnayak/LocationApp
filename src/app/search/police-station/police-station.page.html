@@ -86,45 +86,49 @@
       <div class="title">Fight against Crime!!!</div>
       <div class="subtitle">Take a first step with us...</div>
     </div>
+    <ion-button style="margin-left: 150px" color="primary" routerLink="/places/tabs/search"
+    >Pick More >></ion-button>
 
-    <ion-fab-button class="refresh" color="dark">
-      <ion-icon name="md-refresh"></ion-icon>
-    </ion-fab-button>
-
-  </div>
-  <div class="body ion-padding">
-    <div class="ion-text-center" *ngIf="!isLoading && results.length <= 0">
-      <p>No locations picked by you yet!!</p>
-      <ion-button color="primary" routerLink="/places/tabs/search"
-        >Pick Locations</ion-button
-      >
-    </div>
-      
-    <div class="currencies" *ngIf="!isLoading && results.length > 0">
-      <ion-row class="currency" *ngFor="let offer of results">
+  <ion-fab-button class="fab" color="purple" (click)="openHintModal()">
+<p class="fab-p">Tap</p>
+  </ion-fab-button>
  
-       
-        <ion-col class="image" *ngIf="offer.placeType === 'police'">
-          <img [src]="offer.imageIcon" alt="">
-        </ion-col>
-        <ion-col size="3" class="text" *ngIf="offer.placeType === 'police'">
-         
-       
-          <p class="rank"> {{offer.rating || "No ratings"}}</p>
- 
-        </ion-col>
-        <ion-col size="5" class="text" *ngIf="offer.placeType === 'police'">
-          <p class="usd">{{offer.name }} </p>
-          <p class="evolution" ></p>
-        </ion-col>
-        <ion-col size="1" *ngIf="offer.placeType === 'police'">
 
-            <ion-icon name="trash" (click)="onCancel(offer.id)"></ion-icon>
-
-        </ion-col>
-
-      </ion-row>
-    </div>
-
+</div>
+<div class="body ion-padding">
+  <div class="ion-text-center" *ngIf="!isLoading && results.length <= 0">
+    <p>No locations picked by you yet!!</p>
+    <ion-button color="primary" routerLink="/places/tabs/search"
+      >Pick Locations</ion-button
+    >
   </div>
+    
+  <div class="currencies" *ngIf="!isLoading && results.length > 0">
+    <ion-row class="currency" *ngFor="let offer of results">
+
+     
+      <ion-col class="image" *ngIf="offer.placeType === 'police'">
+        <img [src]="offer.imageIcon" alt="">
+      </ion-col>
+      <ion-col size="3" class="text" *ngIf="offer.placeType === 'police'">
+        <p class="rank"> Rating: {{offer.rating || "No ratings"}}</p>
+     <p class="rank-business">{{offer.business_status || "N/A"}} </p>
+       
+
+      </ion-col>
+      <ion-col size="5" class="text" *ngIf="offer.placeType === 'police'">
+        <p class="usd">{{offer.name }} </p>
+     <br>
+        <p class="evolution" >{{offer.vicinity}}</p>
+      </ion-col>
+      <ion-col size="1" *ngIf="offer.placeType === 'police'">
+
+          <ion-icon name="trash" (click)="onCancel(offer.id)"></ion-icon>
+
+      </ion-col>
+
+    </ion-row>
+  </div>
+
+</div>
 </ion-content>

@@ -7,13 +7,15 @@ import { IonicModule } from '@ionic/angular';
 import { ZooPageRoutingModule } from './zoo-routing.module';
 
 import { ZooPage } from './zoo.page';
+import { HintModalPageModule } from '../hint-modal/hint-modal.module';
 
 @NgModule({
   imports: [
     CommonModule,
     FormsModule,
     IonicModule,
-    ZooPageRoutingModule
+    ZooPageRoutingModule,
+    HintModalPageModule
   ],
   declarations: [ZooPage]
 })

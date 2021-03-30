@@ -171,10 +171,10 @@
 <ion-label>Select Distance</ion-label>
 <ion-select [(ngModel)]="isKM" (ionChange)="nearbyPlace()">
 <ion-select-option value="500">Select</ion-select-option>
-    <ion-select-option value="2000">2 KM</ion-select-option>
-    <ion-select-option value="4000">4 KM</ion-select-option>
-    <ion-select-option value="6000">6 KM</ion-select-option>
-    <ion-select-option value="8000">8 KM</ion-select-option>
+    <ion-select-option value="5000">5 KM</ion-select-option>
+    <ion-select-option value="10000">10 KM</ion-select-option>
+    <ion-select-option value="15000">15 KM</ion-select-option>
+    <ion-select-option value="20000">20 KM</ion-select-option>
 </ion-select>
 </ion-item>
 
@@ -218,10 +218,10 @@
       <!-- Display a list of nearby services to the user -->
     
       <ion-card *ngFor="let item of details">
-        <ion-item>
+        <ion-item  *ngIf="item.photos" >
         
           <ion-thumbnail *ngIf="item.photos" item-start>
-            <img [src]="item.photos[0].getUrl()">
+            <img [src]="item.icon">
           </ion-thumbnail>
             <ion-thumbnail *ngIf="!item.photos" item-start>
               <img [src]="item.icon">
@@ -230,7 +230,7 @@
             <ion-row>
               <ion-col>        
               <div *ngIf="item.photos">
-                  <!-- <img [src]="item.photos[0].getUrl()" width=100px height="100px"/> -->
+                  <img [src]="item.photos[0].getUrl()" width=100px height="100px"/> 
                 </div>
                 <ion-label>{{item.name}}</ion-label>   
               <p style="color: red;">Rating: {{item.rating||"N/A"}}</p>   
@@ -239,7 +239,7 @@
             </ion-row>
           </ion-grid>    
         </ion-item>
-        <ion-card-content>
+        <ion-card-content *ngIf="item.photos">
           <ion-label>{{item.business_status||"N/A"}}</ion-label>
           <ion-label slot="end" class="arrow-icon" (click)="onClick(item)">Pick</ion-label>
         </ion-card-content>

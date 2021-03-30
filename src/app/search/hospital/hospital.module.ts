@@ -9,6 +9,8 @@ import { HospitalPageRoutingModule } from './hospital-routing.module';
 import { HospitalPage } from './hospital.page';
 import { CreateBookingComponent } from 'src/app/bookings/create-booking/create-booking.component';
 import { SharedModule } from 'src/app/shared/shared.module';
+import { HintModalPage } from '../hint-modal/hint-modal.page';
+import { HintModalPageModule } from '../hint-modal/hint-modal.module';
 
 
 @NgModule({
@@ -17,8 +19,8 @@ import { SharedModule } from 'src/app/shared/shared.module';
     FormsModule,
     IonicModule,
     HospitalPageRoutingModule,
-    
-    SharedModule
+    SharedModule,
+    HintModalPageModule
 
   ],
   declarations: [HospitalPage,  CreateBookingComponent ],

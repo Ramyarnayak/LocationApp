@@ -7,13 +7,15 @@ import { IonicModule } from '@ionic/angular';
 import { AirportPageRoutingModule } from './airport-routing.module';
 
 import { AirportPage } from './airport.page';
+import { HintModalPageModule } from '../hint-modal/hint-modal.module';
 
 @NgModule({
   imports: [
     CommonModule,
     FormsModule,
     IonicModule,
-    AirportPageRoutingModule
+    AirportPageRoutingModule,
+    HintModalPageModule
   ],
   declarations: [AirportPage]
 })

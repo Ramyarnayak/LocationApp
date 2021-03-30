@@ -7,14 +7,18 @@ import { IonicModule } from '@ionic/angular';
 import { ForWeekendPageRoutingModule } from './for-weekend-routing.module';
 
 import { ForWeekendPage } from './for-weekend.page';
+import { Camera } from '@capacitor/core';
+
 
 @NgModule({
   imports: [
     CommonModule,
     FormsModule,
     IonicModule,
-    ForWeekendPageRoutingModule
+    ForWeekendPageRoutingModule,
+
   ],
+
   declarations: [ForWeekendPage]
 })
 export class ForWeekendPageModule {}

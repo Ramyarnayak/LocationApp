@@ -1,0 +1,31 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/"></ion-back-button>
+    </ion-buttons>
+    <ion-title>Reactive List Label</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content #content [scrollEvents]="true" (ionScroll)="scroll($event)">
+
+
+  <ion-fab vertical="top" horizontal="center" slot="fixed">
+    <ion-fab-button class="fab-reactive-list">
+      {{ currentCategory }}
+    </ion-fab-button>
+  </ion-fab>
+
+  <ion-card #card (visible)="itemIsVisible($event, offer)" *ngFor="let offer of offers">
+    <div *ngFor="let book of dataList">
+    <img [src]="book.pictureProduct" />
+  </div>
+    <ion-card-content>
+      <ion-card-title>
+        {{ offer.title }}
+      </ion-card-title>
+      <p> {{ offer.description }} </p>
+      <b> {{ offer.category }} - {{ offer.price | currency:'INR' }}</b>
+    </ion-card-content>
+  </ion-card>
+</ion-content>

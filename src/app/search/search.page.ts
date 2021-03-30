@@ -155,15 +155,17 @@ current = {
   }
 
   onClick(item){
+
     this.loadCtrl.create({
       message: 'Creating place...'
     })
     .then(loadingEl => {
      loadingEl.present();
-     var photo= item.photos[0].getUrl();
+   
+     var pic='https://lonelyplanetimages.imgix.net/mastheads/GettyImages-538096543_medium.jpg?sharp=10&vib=20&w=1200';
      this.placesService.addSearchPlace(
        this.placeType,
-      photo,
+    item.icon,
        item.icon,
   item.name,
   item.rating,
@@ -206,6 +208,8 @@ current = {
       });
    
     });
+
+  
    
   }
 

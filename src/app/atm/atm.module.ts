@@ -7,13 +7,17 @@ import { IonicModule } from '@ionic/angular';
 import { AtmPageRoutingModule } from './atm-routing.module';
 
 import { AtmPage } from './atm.page';
+import { HintModalPageModule } from '../search/hint-modal/hint-modal.module';
 
 @NgModule({
   imports: [
     CommonModule,
     FormsModule,
     IonicModule,
-    AtmPageRoutingModule
+    AtmPageRoutingModule,
+    HintModalPageModule
+
+
   ],
   declarations: [AtmPage]
 })

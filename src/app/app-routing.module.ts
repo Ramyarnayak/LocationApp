@@ -37,6 +37,21 @@ const routes: Routes = [
     ,canLoad: [AuthGuard]
   },
   {
+    path: 'places/tabs/search/for-family',
+    loadChildren: () => import('./search/for-family/for-family.module').then( m => m.ForFamilyPageModule)
+    ,canLoad: [AuthGuard]
+  },
+  {
+    path: 'places/tabs/search/my-trip',
+    loadChildren: () => import('./search/my-trip/my-trip.module').then( m => m.MyTripPageModule)
+    ,canLoad: [AuthGuard]
+  },
+  {
+    path: 'places/tabs/search/adventure',
+    loadChildren: () => import('./search/adventure/adventure.module').then( m => m.AdventurePageModule)
+    ,canLoad: [AuthGuard]
+  },
+  {
     path: 'places/tabs/search/atm',
     loadChildren: () => import('./atm/atm.module').then( m => m.AtmPageModule)
     ,canLoad: [AuthGuard]

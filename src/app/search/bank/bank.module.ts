@@ -7,13 +7,15 @@ import { IonicModule } from '@ionic/angular';
 import { BankPageRoutingModule } from './bank-routing.module';
 
 import { BankPage } from './bank.page';
+import { HintModalPageModule } from '../hint-modal/hint-modal.module';
 
 @NgModule({
   imports: [
     CommonModule,
     FormsModule,
     IonicModule,
-    BankPageRoutingModule
+    BankPageRoutingModule,
+    HintModalPageModule
   ],
   declarations: [BankPage]
 })

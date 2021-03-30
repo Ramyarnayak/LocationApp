@@ -7,6 +7,7 @@ import { IonicModule } from '@ionic/angular';
 import { RestaurantPageRoutingModule } from './restaurant-routing.module';
 
 import { RestaurantPage } from './restaurant.page';
+import { HintModalPageModule } from '../hint-modal/hint-modal.module';
 
 @NgModule({
   imports: [
@@ -14,6 +15,7 @@ import { RestaurantPage } from './restaurant.page';
     FormsModule,
     IonicModule,
     RestaurantPageRoutingModule,
+    HintModalPageModule
     
   ],
   declarations: [RestaurantPage]

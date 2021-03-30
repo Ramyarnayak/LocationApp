@@ -47,6 +47,22 @@ const routes: Routes = [
   {
     path: 'for-weekend',
     loadChildren: () => import('./for-weekend/for-weekend.module').then( m => m.ForWeekendPageModule)
+  },
+  {
+    path: 'hint-modal',
+    loadChildren: () => import('./hint-modal/hint-modal.module').then( m => m.HintModalPageModule)
+  },
+  {
+    path: 'for-family',
+    loadChildren: () => import('./for-family/for-family.module').then( m => m.ForFamilyPageModule)
+  },
+  {
+    path: 'my-trip',
+    loadChildren: () => import('./my-trip/my-trip.module').then( m => m.MyTripPageModule)
+  },
+  {
+    path: 'adventure',
+    loadChildren: () => import('./adventure/adventure.module').then( m => m.AdventurePageModule)
   }
 ];
 

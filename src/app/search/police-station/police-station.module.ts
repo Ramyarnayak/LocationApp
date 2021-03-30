@@ -7,13 +7,15 @@ import { IonicModule } from '@ionic/angular';
 import { PoliceStationPageRoutingModule } from './police-station-routing.module';
 
 import { PoliceStationPage } from './police-station.page';
+import { HintModalPageModule } from '../hint-modal/hint-modal.module';
 
 @NgModule({
   imports: [
     CommonModule,
     FormsModule,
     IonicModule,
-    PoliceStationPageRoutingModule
+    PoliceStationPageRoutingModule,
+    HintModalPageModule
   ],
   declarations: [PoliceStationPage]
 })
